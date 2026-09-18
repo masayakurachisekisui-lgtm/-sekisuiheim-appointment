@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>家づくり個別相談予約｜セキスイハイム近畿</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Yu Gothic",
+    "Hiragino Kaku Gothic ProN",
+    sans-serif;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 14px 40px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 22px;
+  box-shadow: 0 5px 22px rgba(0,0,0,0.08);
+}
+
+.company {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 7px 12px;
+  border-radius: 99px;
+  background: #eef1f3;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 13px 0;
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.lead {
+  color: #555;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+label.title {
+  display: block;
+  margin: 20px 0 7px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccd1d5;
+  border-radius: 9px;
+  font-size: 16px;
+  background: #fff;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.checkbox-group {
+  display: grid;
+  gap: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+}
+
+.checkbox-item input {
+  width: auto;
+}
+
+.submit {
+  width: 100%;
+  margin-top: 28px;
+  padding: 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #222;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit:active {
+  opacity: 0.8;
+}
+
+.note {
+  margin-top: 18px;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #777;
+  font-size: 11px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="card">
+
+    <div class="company">
+      セキスイハイム近畿　倉智 勝也
+    </div>
+
+    <div class="badge">
+      資料請求いただいたお客様専用
+    </div>
+
+    <h1>
+      家づくり 個別相談予約
+    </h1>
+
+    <p class="lead">
+      土地・間取り・資金計画・住宅性能・住宅会社比較など、
+      ご希望に合わせて個別にご案内します。<br>
+      まだ具体的に決まっていない段階でもお気軽にご予約ください。
+    </p>
+
+    <form
+      action="https://formsubmit.co/masaya.kurachi@sekisui.com"
+      method="POST"
+      onsubmit="return checkForm();"
+    >
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="【新規予約】資料請求のお客様から個別相談予約"
+      >
+
+      <input
+        type="hidden"
+        name="_captcha"
+        value="false"
+      >
+
+      <input
+        type="hidden"
+        name="_template"
+        value="table"
+      >
+
+      <label class="title">
+        お名前（必須）
+      </label>
+
+      <input
+        type="text"
+        name="お名前"
+        placeholder="例：山田 太郎"
+        required
+      >
+
+      <label class="title">
+        メールアドレス（必須）
+      </label>
+
+      <input
+        type="email"
+        name="メールアドレス"
+        placeholder="example@email.com"
+        required
+      >
+
+      <label class="title">
+        電話番号
+      </label>
+
+      <input
+        type="tel"
+        name="電話番号"
+        placeholder="090-0000-0000"
+      >
+
+      <label class="title">
+        資料請求元（必須）
+      </label>
+
+      <select name="資料請求元" required>
+        <option value="">選択してください</option>
+        <option>タウンライフ家づくり</option>
+        <option>SUUMO等の一括資料請求</option>
+        <option>その他</option>
+      </select>
+
+      <label class="title">
+        ご相談内容（1つ以上選択）
+      </label>
+
+      <div class="checkbox-group">
+
+        <label class="checkbox-item">
+          <input
+            type="checkbox"
+            name="相談内容"
+            value="土地探し"
+          >
+          土地探し
+        </label>
+
+        <label class="checkbox-item">
+          <input
+            type="checkbox"
+            name="相談内容"
+            value="間取り・プラン"
+          >
+          間取り・プラン
+        </label>
+
+        <label class="checkbox-item">
+          <input
+            type="checkbox"
+            name="相談内容"
+            value="資金計画・住宅ローン"
+          >
+          資金計画・住宅ローン
+        </label>
+
+        <label class="checkbox-item">
+          <input
+            type="checkbox"
+            name="相談内容"
+            value="耐震・断熱など住宅性能"
+          >
+          耐震・断熱など住宅性能
+        </label>
+
+        <label class="checkbox-item">
+          <input
+            type="checkbox"
+            name="相談内容"
+            value="ハウスメーカー比較"
+          >
+          ハウスメーカー比較
+        </label>
+
+        <label class="checkbox-item">
+          <input
+            type="checkbox"
+            name="相談内容"
+            value="展示場・建物見学"
+          >
+          展示場・建物見学
+        </label>
+
+      </div>
+
+      <label class="title">
+        希望日時（必須）
+      </label>
+
+      <input
+        type="datetime-local"
+        name="希望日時"
+        required
+      >
+
+      <label class="title">
+        相談方法（必須）
+      </label>
+
+      <select name="相談方法" required>
+
+        <option value="">
+          選択してください
+        </option>
+
+        <option>
+          展示場で相談
+        </option>
+
+        <option>
+          オンライン（Zoom等）
+        </option>
+
+        <option>
+          ご自宅・ご指定場所
+        </option>
+
+        <option>
+          まずは電話で相談
+        </option>
+
+      </select>
+
+      <label class="title">
+        現在の状況
+      </label>
+
+      <select name="現在の状況">
+
+        <option>
+          まだ何も決まっていない
+        </option>
+
+        <option>
+          土地を探している
+        </option>
+
+        <option>
+          土地が決まっている
+        </option>
+
+        <option>
+          建て替えを検討している
+        </option>
+
+        <option>
+          他社と比較中
+        </option>
+
+      </select>
+
+      <label class="title">
+        ご希望・ご質問
+      </label>
+
+      <textarea
+        name="ご希望・ご質問"
+        placeholder="例：○○市で土地から探しています。総額の目安を知りたいです。"
+      ></textarea>
+
+      <p class="note">
+        ※こちらは予約希望の受付フォームです。<br>
+        送信後、担当者から日時確定のご連絡を差し上げます。
+      </p>
+
+      <button
+        type="submit"
+        class="submit"
+      >
+        相談予約を送信する
+      </button>
+
+    </form>
+
+    <div class="footer">
+      家づくりのご相談はお気軽にどうぞ
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+function checkForm() {
+
+  const checked =
+    document.querySelectorAll(
+      'input[name="相談内容"]:checked'
+    );
+
+  if (checked.length === 0) {
+
+    alert(
+      "ご相談内容を1つ以上選択してください。"
+    );
+
+    return false;
+  }
+
+  return true;
+}
+
+</script>
+
+</body>
+</html>
