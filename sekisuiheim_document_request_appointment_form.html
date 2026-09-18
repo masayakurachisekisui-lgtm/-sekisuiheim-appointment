@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>セキスイハイム｜家づくり個別相談予約</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f6f8;color:#222;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}.wrap{max-width:720px;margin:auto;padding:22px 14px 44px}.card{background:#fff;border-radius:18px;padding:26px 22px;box-shadow:0 5px 22px #00000012}.brand{font-weight:800;letter-spacing:.04em;font-size:14px;margin-bottom:18px}.tag{display:inline-block;background:#eef1f3;border-radius:99px;padding:6px 11px;font-size:12px;font-weight:700}h1{font-size:25px;line-height:1.45;margin:12px 0}.lead{color:#555;line-height:1.8;margin:0 0 24px}h2{font-size:17px;margin:25px 0 8px}label{display:block;font-weight:700;margin:17px 0 7px}input,select,textarea{width:100%;padding:12px;border:1px solid #cfd4d8;border-radius:9px;font-size:16px;background:#fff}textarea{min-height:100px;resize:vertical}.checks{display:grid;gap:8px}.checks label{font-weight:400;margin:0;display:flex;gap:9px;align-items:center}.checks input{width:auto}.btn{width:100%;margin-top:25px;padding:15px;border:0;border-radius:10px;background:#222;color:#fff;font-size:16px;font-weight:800;cursor:pointer}.note{font-size:12px;color:#777;line-height:1.75;margin-top:18px}.required{font-size:11px;color:#777;font-weight:400;margin-left:4px}.footer{margin-top:18px;text-align:center;color:#777;font-size:11px}
+</style>
+</head>
+<body>
+<div class="wrap"><div class="card">
+<div class="brand">セキスイハイム近畿　倉智 勝也</div>
+<div class="tag">資料請求いただいたお客様専用</div>
+<h1>家づくり 個別相談予約</h1>
+<p class="lead">資料だけでは分かりにくい「土地・間取り・資金計画・住宅会社の違い」などを、ご希望に合わせて個別にご案内します。まだ具体的に決まっていない段階でもお気軽にご予約ください。</p>
+
+<form action="https://formsubmit.co/masaya.kurachi@sekisui.com" method="POST" id="reservationForm">
+<input type="hidden" name="_subject" value="【新規予約】資料請求客から家づくり個別相談予約">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://formsubmit.co/thanks.html">
+
+<h2>お客様情報</h2>
+<label>お名前 <span class="required">必須</span></label>
+<input name="お名前" required placeholder="例：山田 太郎">
+
+<label>メールアドレス <span class="required">必須</span></label>
+<input type="email" name="メールアドレス" required placeholder="example@mail.com">
+
+<label>電話番号</label>
+<input type="tel" name="電話番号" placeholder="090-0000-0000">
+
+<label>資料請求元 <span class="required">必須</span></label>
+<select name="資料請求元" required>
+<option value="">選択してください</option>
+<option>タウンライフ家づくり</option>
+<option>SUUMO等の一括資料請求</option>
+<option>その他</option>
+</select>
+
+<h2>ご相談内容</h2>
+<div class="checks" id="topics">
+<label><input type="checkbox" name="相談内容[]" value="土地探し">土地探し</label>
+<label><input type="checkbox" name="相談内容[]" value="間取り・プラン">間取り・プラン</label>
+<label><input type="checkbox" name="相談内容[]" value="資金計画・住宅ローン">資金計画・住宅ローン</label>
+<label><input type="checkbox" name="相談内容[]" value="耐震・断熱など住宅性能">耐震・断熱など住宅性能</label>
+<label><input type="checkbox" name="相談内容[]" value="ハウスメーカー比較">ハウスメーカー比較</label>
+<label><input type="checkbox" name="相談内容[]" value="展示場・建物見学">展示場・建物見学</label>
+</div>
+
+<label>希望日時 <span class="required">必須</span></label>
+<input type="datetime-local" name="希望日時" required>
+
+<label>相談方法 <span class="required">必須</span></label>
+<select name="相談方法" required>
+<option value="">選択してください</option>
+<option>展示場で相談</option>
+<option>オンライン（Zoom等）</option>
+<option>ご自宅・ご指定場所</option>
+<option>まずは電話で相談</option>
+</select>
+
+<label>現在の状況</label>
+<select name="現在の状況">
+<option>まだ何も決まっていない</option>
+<option>土地を探している</option>
+<option>土地が決まっている</option>
+<option>建て替えを検討している</option>
+<option>他社と比較中</option>
+</select>
+
+<label>ご希望・ご質問</label>
+<textarea name="ご希望・ご質問" placeholder="例：○○市で土地から探しています。総額の目安を知りたいです。"></textarea>
+
+<p class="note">※こちらは「予約希望」の受付フォームです。送信後、担当者より日時確定のご連絡を差し上げます。<br>※フォーム送信内容は担当者のメールアドレスへ通知されます。</p>
+<button class="btn" type="submit">相談予約を送信する</button>
+</form>
+<div class="footer">家づくりのご相談はお気軽にどうぞ</div>
+</div></div>
+<script>
+document.getElementById('reservationForm').addEventListener('submit',function(e){
+ if(document.querySelectorAll('input[name="相談内容[]"]:checked').length===0){
+  e.preventDefault(); alert('ご相談内容を1つ以上選択してください。');
+ }
+});
+</script>
+</body></html>
